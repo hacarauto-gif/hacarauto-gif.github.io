@@ -1,212 +1,131 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>하카오토 - 장기렌트·리스 전문</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap');
-body { font-family: 'Noto Sans KR', sans-serif; }
-.gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-.parallax { background-attachment: fixed; background-size: cover; }
-.card-img { height: 200px; object-fit: cover; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하카오토 랜딩페이지</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #111;
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        .hero, .section {
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+    </style>
 </head>
-<body class="bg-gray-50">
+<body>
 
-<!-- 상단 연락처 바 -->
-<div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 text-center text-sm font-medium fixed top-0 w-full z-50">
-  <div class="flex justify-center items-center space-x-6">
-    <a href="tel:010-3561-3528" class="hover:text-yellow-300 transition-colors flex items-center gap-1">
-      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012 2h1a1 1 0 110 2h1a2 2 0 01-2 2h-1a1 1 0 110-2h-1a2 2 0 01-2-2zm10-4a2 2 0 100 4 2 2 0 000-4zm.5 4a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
-      </svg>
-      010-3561-3528
-    </a>
-    <span>🕒 08:00-20:00</span>
-  </div>
-</div>
+    <!-- 헤더 -->
+    <header class="p-6 flex justify-between items-center bg-black bg-opacity-50 fixed w-full z-10">
+        <div class="text-2xl font-bold">하카오토</div>
+        <nav class="space-x-6">
+            <a href="#hero" class="hover:text-yellow-400">홈</a>
+            <a href="#service" class="hover:text-yellow-400">서비스</a>
+            <a href="#features" class="hover:text-yellow-400">특징</a>
+            <a href="#contact" class="hover:text-yellow-400">문의</a>
+        </nav>
+    </header>
 
-<!-- 헤더 -->
-<header class="bg-white/95 backdrop-blur shadow-lg fixed top-8 w-full z-40">
-  <div class="max-w-7xl mx-auto px-4 py-4">
-    <div class="flex justify-between items-center">
-      <div class="text-3xl font-bold text-blue-600 flex items-center">
-        🚗 <span class="ml-2">하카오토</span>
-      </div>
-      <nav class="hidden md:flex space-x-8">
-        <a href="#services" class="text-gray-700 hover:text-blue-600">서비스</a>
-        <a href="#about" class="text-gray-700 hover:text-blue-600">회사소개</a>
-        <a href="#contact" class="text-gray-700 hover:text-blue-600">문의하기</a>
-        <a href="https://open.kakao.com/o/sWN8HqHh" target="_blank" class="bg-gradient-to-r from-pink-500 to-orange-500 text-white px-6 py-2 rounded-full font-medium hover:shadow-lg">카카오톡 상담</a>
-      </nav>
-    </div>
-  </div>
-</header>
-
-<!-- 히어로 섹션 -->
-<section class="parallax" style="background-image: url('https://images.unsplash.com/photo-1583258294839-2b3d2f9e8f3c')">
-  <div class="max-w-7xl mx-auto px-4 relative z-10">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-      <div class="text-center md:text-left">
-        <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
-          빠른승인가능<br>즉시출고<br><span class="text-yellow-300">장기렌트 리스</span>
-        </h1>
-        <p class="text-xl mb-8 opacity-90 leading-relaxed text-white/80">
-          합리적인 가격으로 만나는 프리미엄 차량 서비스<br>
-          하카오토와 함께 새로운 드라이빙 경험을 시작하세요
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-          <a href="tel:010-3561-3528" class="bg-gradient-to-r from-pink-500 to-orange-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transform hover:scale-105 transition-all text-center">
-            상담신청
-          </a>
-          <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all text-center">
-            서비스 알아보기
-          </a>
+    <!-- 1. 히어로 섹션 -->
+    <section id="hero" class="hero flex items-center justify-center text-center">
+        <div class="overlay"></div>
+        <div class="content px-6">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">프리미엄 자동차 랜딩</h1>
+            <p class="text-xl md:text-2xl mb-6">고급 자동차 느낌의 랜딩페이지를 경험해보세요.</p>
+            <a href="#service" class="px-6 py-3 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-600 transition">서비스 보기</a>
         </div>
-      </div>
-      <div class="relative">
-        <div class="bg-white/10 backdrop-blur rounded-3xl p-8 border border-white/20">
-          <div class="w-full h-64 bg-gradient-to-br from-white/10 to-white/5 rounded-2xl flex items-center justify-center">
-            <div class="text-center">
-              <div class="text-8xl mb-4">📱</div>
-              <h3 class="text-xl font-semibold mb-2">모바일 앱</h3>
-              <p class="text-white/80">언제 어디서나 간편하게</p>
+    </section>
+
+    <!-- 2. 서비스 섹션 -->
+    <section id="service" class="section py-20 bg-black bg-opacity-40 text-white flex flex-col items-center">
+        <h2 class="section-title">서비스 소개</h2>
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl">
+            <div class="p-6 bg-gray-800 bg-opacity-60 rounded-xl text-center">
+                <h3 class="text-2xl font-semibold mb-4">리스/렌트</h3>
+                <p>저신용자도 쉽게 이용 가능한 장기렌트 서비스를 제공합니다.</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 서비스 섹션 -->
-<section class="py-20 bg-white" id="services">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-gray-800 mb-4">하카오토 서비스</h2>
-      <p class="text-xl text-gray-600">고객의 다양한 니즈에 맞춘 맞춤형 차량 서비스를 제공합니다</p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- 장기렌트 카드 -->
-      <div class="card-hover bg-white rounded-3xl p-8 text-center border border-gray-200">
-        <img src="https://example.com/rental-car.jpg" alt="장기렌트" class="card-img rounded-t-3xl">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">장기렌트</h3>
-        <p class="text-gray-600 leading-relaxed">12개월부터 60개월까지 다양한 기간의 장기렌트 서비스로 부담 없이 새 차를 이용하세요</p>
-      </div>
-      <!-- 저신용·무심사 카드 -->
-      <div class="card-hover bg-white rounded-3xl p-8 text-center border border-gray-200">
-        <img src="https://example.com/no-credit-car.jpg" alt="저신용·무심사" class="card-img rounded-t-3xl">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">저신용·무심사</h3>
-        <p class="text-gray-600 leading-relaxed">신용등급에 관계없이 누구나 이용 가능한 장기렌트 리스 서비스를 제공합니다</p>
-      </div>
-      <!-- 리스 카드 -->
-      <div class="card-hover bg-white rounded-3xl p-8 text-center border border-gray-200">
-        <img src="https://example.com/lease-car.jpg" alt="리스" class="card-img rounded-t-3xl">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">리스</h3>
-        <p class="text-gray-600 leading-relaxed">법인 및 개인사업자를 위한 최적화된 리스 상품으로 세제혜택까지 받으세요</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 차량 리스트 섹션 -->
-<section class="py-20 bg-white" id="vehicles">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-gray-800 mb-4">인기 차량</h2>
-      <p class="text-xl text-gray-600">가장 많이 찾는 차량들을 특가로 만나보세요</p>
-    </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {[
-        { name: "[신차장기렌트] 기아 모닝 (화이트)", price: "300,000", originalPrice: "480,000", badge: "예약 300+", img: "https://example.com/morning.jpg" },
-        { name: "[신차장기렌트] 기아 레이 (화이트)", price: "310,000", originalPrice: "480,000", badge: "예약 700+", img: "https://example.com/ray.jpg" },
-        { name: "[신차장기렌트] 현대 캐스퍼 (가키)", price: "360,000", originalPrice: "510,000", badge: "예약 400+", img: "https://example.com/casper.jpg" },
-        { name: "[신차장기렌트] 현대 아반떼 (화이트)", price: "390,000", originalPrice: "690,000", badge: "예약 400+", img: "https://example.com/avante.jpg" },
-        { name: "[신차장기렌트] 기아 쏘렌토 (화이트)", price: "410,000", originalPrice: "740,000", badge: "예약 850+", img: "https://example.com/sorento.jpg" },
-        { name: "[신차장기렌트] 기아 K5 (화이트)", price: "420,000", originalPrice: "820,000", badge: "예약 400+", img: "https://example.com/k5.jpg" },
-        { name: "[신차장기렌트] 현대 쏘나타 (화이트)", price: "420,000", originalPrice: "820,000", badge: "예약 400+", img: "https://example.com/sonata.jpg" },
-        { name: "[신차장기렌트] 기아 카니발 (화이트)", price: "590,000", originalPrice: "960,000", badge: "예약 210+", img: "https://example.com/carnival.jpg" }
-      ].map((vehicle, index) => (
-        <div key={index} class="card-hover bg-white rounded-3xl p-8 text-center border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-          <img :src="vehicle.img" alt={vehicle.name} class="w-full h-48 object-cover rounded-t-3xl">
-          <div class="badge bg-blue-500 text-white font-semibold px-4 py-1 rounded-full">{vehicle.badge}</div>
-          <h3 class="font-semibold text-gray-800 mb-2 text-sm">{vehicle.name}</h3>
-          <div class="flex items-center justify-between">
-            <div>
-              <span class="text-2xl font-bold text-blue-600">{vehicle.price}</span>
-              <span class="text-lg">원</span>
+            <div class="p-6 bg-gray-800 bg-opacity-60 rounded-xl text-center">
+                <h3 class="text-2xl font-semibold mb-4">차량 관리</h3>
+                <p>정기 점검, 보험, 사고 처리까지 토탈 차량 관리 솔루션.</p>
             </div>
-            <span class="text-sm text-gray-500 line-through">{vehicle.originalPrice}원</span>
-          </div>
+            <div class="p-6 bg-gray-800 bg-opacity-60 rounded-xl text-center">
+                <h3 class="text-2xl font-semibold mb-4">상담</h3>
+                <p>온라인 문의로 빠르고 편리하게 맞춤 상담 서비스를 제공합니다.</p>
+            </div>
         </div>
-      ))}
-    </div>
-    <div class="text-center mt-12">
-      <a href="#services" class="bg-blue-600 hover:bg-blue-700 text-white px-12 py-4 rounded-full text-lg font-semibold">장기렌트 전체보기</a>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- CTA 섹션 -->
-<section class="py-20 bg-gray-50 text-center" id="quote">
-  <div class="max-w-4xl mx-auto px-4">
-    <h2 class="text-4xl font-bold text-gray-800 mb-6">지금 바로 견적을 받아보세요</h2>
-    <p class="text-xl text-gray-600 mb-8">차가 필요한 모든 순간, 하카오토와 함께하세요.</p>
-    <a href="https://open.kakao.com/o/sWN8HqHh" target="_blank" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-4 rounded-full text-xl font-semibold hover:shadow-xl transform hover:scale-105 transition-all">
-      카카오톡 즉시상담가능
-    </a>
-  </div>
-</section>
+    <!-- 3. 특징 섹션 -->
+    <section id="features" class="section py-20 bg-gray-900 bg-opacity-70 text-white flex flex-col items-center">
+        <h2 class="section-title">주요 특징</h2>
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl">
+            <div class="p-6 bg-gray-800 bg-opacity-50 rounded-xl text-center">
+                <h3 class="text-2xl font-semibold mb-4">빠른 처리</h3>
+                <p>모든 서비스 과정이 신속하게 진행되어 시간을 절약합니다.</p>
+            </div>
+            <div class="p-6 bg-gray-800 bg-opacity-50 rounded-xl text-center">
+                <h3 class="text-2xl font-semibold mb-4">신뢰성</h3>
+                <p>투명한 과정과 전문 상담으로 고객 신뢰를 최우선합니다.</p>
+            </div>
+            <div class="p-6 bg-gray-800 bg-opacity-50 rounded-xl text-center">
+                <h3 class="text-2xl font-semibold mb-4">맞춤형</h3>
+                <p>각 고객의 상황에 맞춘 최적화된 솔루션 제공.</p>
+            </div>
+        </div>
+    </section>
 
-<!-- 푸터 -->
-<footer class="bg-gray-900 text-white py-16" id="contact">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="grid md:grid-cols-3 gap-8">
-      <div>
-        <div class="text-2xl font-bold mb-4 flex items-center">
-          🚗 <span class="ml-2">하카오토</span>
-        </div>
-        <p class="text-gray-400 leading-relaxed mb-4">
-          스마트한 장기렌트카 전문 기업<br>
-          고객 만족을 최우선으로 하는 신뢰할 수 있는 파트너
-        </p>
-        <p class="text-gray-400 text-sm">📍 서울특별시 월드컵로196 E271<br>대명비첸시티</p>
-      </div>
-      <div>
-        <h3 class="text-lg font-semibold mb-4 text-orange-400">연락처</h3>
-        <div class="space-y-2 text-gray-400">
-          <p>📞 대표번호: 010-3561-3528</p>
-          <p>🕒 운영시간: 08:00-20:00</p>
-        </div>
-      </div>
-      <div>
-        <h3 class="text-lg font-semibold mb-4 text-orange-400">서비스</h3>
-        <div class="space-y-2">
-          <a href="#services" class="block text-gray-400 hover:text-white transition-colors">장기렌트</a>
-          <a href="#services" class="block text-gray-400 hover:text-white transition-colors">리스</a>
-          <a href="#services" class="block text-gray-400 hover:text-white transition-colors">종합관리</a>
-        </div>
-      </div>
-    </div>
-    <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-      <p>&copy; 2024 하카오토. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+    <!-- 4. 문의 섹션 -->
+    <section id="contact" class="section py-20 bg-black bg-opacity-50 text-white flex flex-col items-center">
+        <h2 class="section-title">문의하기</h2>
+        <p class="mb-8 max-w-xl text-center">궁금한 사항이 있으신가요? 언제든 문의해주세요.</p>
+        <a href="mailto:test@example.com" class="px-6 py-3 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-600 transition">메일 보내기</a>
+    </section>
 
-<script>
-// 스무스 스크롤
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
-</script>
+    <!-- 푸터 -->
+    <footer class="p-6 bg-black bg-opacity-60 text-white text-center">
+        &copy; 2025 하카오토. All rights reserved.
+    </footer>
+
+    <!-- 랜덤 배경 이미지 스크립트 -->
+    <script>
+        const sections = document.querySelectorAll('.hero, .section');
+        const unsplashUrls = [
+            'https://source.unsplash.com/1920x1080/?car,supercar',
+            'https://source.unsplash.com/1920x1080/?car,luxury',
+            'https://source.unsplash.com/1920x1080/?car,sport',
+            'https://source.unsplash.com/1920x1080/?car,automobile',
+            'https://source.unsplash.com/1920x1080/?car,exotic'
+        ];
+
+        sections.forEach(section => {
+            const randomUrl = unsplashUrls[Math.floor(Math.random() * unsplashUrls.length)];
+            section.style.backgroundImage = `url(${randomUrl})`;
+        });
+    </script>
 </body>
 </html>
