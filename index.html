@@ -1,146 +1,397 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>하카오토 - 장기렌트·리스 전문</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            /* 전체 페이지 배경: 고급 자동차 이미지 */
-            background-image: url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .hero-pattern {
-            /* 히어로 섹션 배경: 자동차 테마 + 약간의 어둡게 처리 */
-            background-image: 
-                linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .floating-animation {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        .parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        
-        .text-shadow {
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .backdrop-blur {
-            backdrop-filter: blur(10px);
-        }
-    </style>
-</head>
-<body class="bg-gray-50">
-    <!-- 상단 연락처 바 -->
-    <div class="gradient-bg text-white py-2 px-4 text-center text-sm font-medium fixed top-0 w-full z-50">
-        <div class="flex justify-center items-center space-x-6">
-            <a href="tel:010-3561-3528" class="hover:text-yellow-300 transition-colors">📞 010-3561-3528</a>
-            <span>🕒 08:00-20:00</span>
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Phone, Clock, MapPin, Star, CheckCircle, Users, Award, Shield, Zap } from "lucide-react"
+
+export default function HomePage() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Top Contact Bar */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 text-center text-sm font-medium fixed top-0 w-full z-50">
+        <div className="flex justify-center items-center space-x-6">
+          <a href="tel:010-3561-3528" className="hover:text-yellow-300 transition-colors flex items-center gap-1">
+            <Phone className="w-4 h-4" />
+            010-3561-3528
+          </a>
+          <span className="flex items-center gap-1">
+            <Clock className="w-4 h-4" />
+            08:00-20:00
+          </span>
         </div>
+      </div>
+
+      {/* Header */}
+      <header className="bg-white/95 backdrop-blur-sm shadow-lg fixed top-8 w-full z-40">
+        <div className="max-w-7xl mx-auto px-4 py-4">
+          <div className="flex justify-between items-center">
+            <div className="text-3xl font-bold text-blue-600 flex items-center">
+              🚗 <span className="ml-2">하카오토</span>
+            </div>
+            <nav className="hidden md:flex space-x-8">
+              <a href="#services" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">서비스</a>
+              <a href="#vehicles" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">차량</a>
+              <a href="#about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">회사소개</a>
+              <a href="#contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">문의하기</a>
+              <Button className="bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600">
+                견적받기
+              </Button>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white pt-32 pb-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-transparent to-purple-500/20"></div>
+
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-center md:text-left">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                빠른승인가능<br />
+                즉시출고<br />
+                <span className="text-yellow-300">장기렌트 리스</span>
+              </h1>
+              <p className="text-xl mb-8 opacity-90 leading-relaxed">
+                합리적인 가격으로 만나는 프리미엄 차량 서비스<br />
+                하카오토와 함께 새로운 드라이빙 경험을 시작하세요
+              </p>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-4 mb-8 text-center">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                  <div className="text-2xl font-bold">15,000+</div>
+                  <div className="text-sm opacity-80">전체 고객 이용자</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                  <div className="text-2xl font-bold">231,755+</div>
+                  <div className="text-sm opacity-80">누적 상담 건수</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                  <div className="text-2xl font-bold">500+</div>
+                  <div className="text-sm opacity-80">보유 차량 대수</div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <Button size="lg" className="bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600">
+                  상담신청
+                </Button>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+                  서비스 알아보기
+                </Button>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+                <div className="w-full h-64 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-6xl mb-4">🚗</div>
+                    <h3 className="text-xl font-semibold mb-2">프리미엄 차량</h3>
+                    <p className="text-white/80">최신 모델의 안전하고 편안한 차량</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Car Brands Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">다양한 브랜드의 차량을 만나보세요</h2>
+            <p className="text-gray-600">국내외 프리미엄 브랜드의 최신 차량들을 합리적인 가격으로</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center opacity-60">
+            <div className="text-center">
+              <div className="text-4xl mb-2">🏎️</div>
+              <div className="text-sm font-medium">제네시스</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-2">🚗</div>
+              <div className="text-sm font-medium">현대</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-2">🚙</div>
+              <div className="text-sm font-medium">기아</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-2">🚐</div>
+              <div className="text-sm font-medium">쉐보레</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-2">🚕</div>
+              <div className="text-sm font-medium">르노삼성</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-2">🚓</div>
+              <div className="text-sm font-medium">쌍용</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-gray-50" id="services">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">하카오토 서비스</h2>
+            <p className="text-xl text-gray-600">고객의 다양한 니즈에 맞춘 맞춤형 차량 서비스를 제공합니다</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-gradient-to-br from-blue-50 to-indigo-100">
+              <CardHeader className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-10 h-10 text-white" />
+                </div>
+                <CardTitle className="text-2xl">장기렌트</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-gray-600 leading-relaxed">
+                  12개월부터 60개월까지 다양한 기간의 장기렌트 서비스로 부담 없이 새 차를 이용하세요
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-gradient-to-br from-green-50 to-emerald-100">
+              <CardHeader className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-10 h-10 text-white" />
+                </div>
+                <CardTitle className="text-2xl">저신용·무심사</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-gray-600 leading-relaxed">
+                  신용등급에 관계없이 누구나 이용 가능한 장기렌트 리스 서비스를 제공합니다
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-gradient-to-br from-purple-50 to-pink-100">
+              <CardHeader className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-10 h-10 text-white" />
+                </div>
+                <CardTitle className="text-2xl">리스</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-gray-600 leading-relaxed">
+                  법인 및 개인사업자를 위한 최적화된 리스 상품으로 세제혜택까지 받으세요
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Vehicle Listings Section */}
+      <section className="py-20 bg-white" id="vehicles">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">인기 차량</h2>
+            <p className="text-xl text-gray-600">가장 많이 찾는 차량들을 특가로 만나보세요</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: "[신차장기렌트] 기아 모닝 (화이트)", price: "300,000", originalPrice: "480,000", badge: "예약 300+" },
+              { name: "[신차장기렌트] 기아 레이 (화이트)", price: "310,000", originalPrice: "480,000", badge: "예약 700+" },
+              { name: "[신차장기렌트] 현대 캐스퍼 (가키)", price: "360,000", originalPrice: "510,000", badge: "예약 400+" },
+              { name: "[신차장기렌트] 현대 아반떼 (화이트)", price: "390,000", originalPrice: "690,000", badge: "예약 400+" },
+              { name: "[신차장기렌트] 기아 쏘렌토 (화이트)", price: "410,000", originalPrice: "740,000", badge: "예약 850+" },
+              { name: "[신차장기렌트] 기아 K5 (화이트)", price: "420,000", originalPrice: "820,000", badge: "예약 400+" },
+              { name: "[신차장기렌트] 현대 쏘나타 (화이트)", price: "420,000", originalPrice: "820,000", badge: "예약 400+" },
+              { name: "[신차장기렌트] 기아 카니발 (화이트)", price: "590,000", originalPrice: "960,000", badge: "예약 210+" }
+            ].map((vehicle, index) => (
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <CardHeader className="p-0">
+                  <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 rounded-t-lg flex items-center justify-center">
+                    <div className="text-6xl">🚗</div>
+                  </div>
+                  <Badge className="absolute top-4 left-4 bg-blue-500 text-white">
+                    {vehicle.badge}
+                  </Badge>
+                </CardHeader>
+                <CardContent className="p-4">
+                  <h3 className="font-semibold text-gray-800 mb-2 text-sm">{vehicle.name}</h3>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <span className="text-2xl font-bold text-blue-600">{vehicle.price}</span>
+                      <span className="text-lg">원</span>
+                    </div>
+                    <span className="text-sm text-gray-500 line-through">{vehicle.originalPrice}원</span>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              🚗 장기렌트 전체보기
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">고객 후기</h2>
+            <p className="text-xl text-gray-600">실제 이용 고객들의 생생한 후기를 확인해보세요</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { name: "김○○님", rating: 5, comment: "빠른 승인과 친절한 상담으로 만족스러운 서비스였습니다. 차량 상태도 완벽했어요!" },
+              { name: "이○○님", rating: 5, comment: "신용등급이 낮아서 걱정했는데 무심사로 진행해주셔서 정말 감사했습니다." },
+              { name: "박○○님", rating: 5, comment: "투명한 가격과 숨겨진 비용이 없어서 믿고 이용할 수 있었습니다." }
+            ].map((review, index) => (
+              <Card key={index} className="hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                      <Users className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">{review.name}</h4>
+                      <div className="flex">
+                        {[...Array(review.rating)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-gray-600">{review.comment}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">하카오토를 선택하는 이유</h2>
+            <p className="text-xl text-gray-600">고객 만족도 98%의 검증된 서비스 품질</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { icon: <CheckCircle className="w-8 h-8" />, title: "투명한 가격", desc: "숨겨진 비용 없는 명확한 가격 정책" },
+              { icon: <Zap className="w-8 h-8" />, title: "빠른 승인", desc: "최대 24시간 내 승인 완료" },
+              { icon: <MapPin className="w-8 h-8" />, title: "전국 서비스", desc: "전국 어디서나 동일한 품질" },
+              { icon: <Phone className="w-8 h-8" />, title: "24시간 지원", desc: "언제든지 연락 가능한 고객지원" }
+            ].map((feature, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">{feature.title}</h3>
+                <p className="text-gray-600">{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mobile App Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold mb-6">
+                간편한 모든 순간,<br />
+                하카오토
+              </h2>
+              <p className="text-xl mb-8 opacity-90">
+                하카오토는 컴퓨터보다 훨씬, 시간에서까지<br />
+                렌터카 전 국가에 어디든 원할 서비스를<br />
+                어우르는 통합 렌탈 모바일러 플랫폼입니다.
+              </p>
+            </div>
+            <div className="relative">
+              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
+                <div className="w-full h-96 bg-gradient-to-br from-white/10 to-white/5 rounded-2xl flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-8xl mb-4">📱</div>
+                    <h3 className="text-xl font-semibold mb-2">모바일 앱</h3>
+                    <p className="text-white/80">언제 어디서나 간편하게</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gray-50 text-center">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-4xl font-bold text-gray-800 mb-6">지금 바로 견적을 받아보세요</h2>
+          <p className="text-xl text-gray-600 mb-8">차가 필요한 모든 순간, 하카오토와 함께하세요.</p>
+          <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-12 py-4">
+            카카오톡 즉시상담가능
+          </Button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <div className="text-2xl font-bold mb-4 flex items-center">
+                🚗 <span className="ml-2">하카오토</span>
+              </div>
+              <p className="text-gray-400 leading-relaxed mb-4">
+                스마트한 장기렌트카 전문 기업<br />
+                고객 만족을 최우선으로 하는 신뢰할 수 있는 파트너
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-orange-400">연락처</h3>
+              <div className="space-y-2 text-gray-400">
+                <p className="flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  010-3561-3528
+                </p>
+                <p className="flex items-center gap-2">
+                  <Clock className="w-4 h-4" />
+                  08:00-20:00
+                </p>
+                <p className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4" />
+                  서울특별시 마포구 월드컵로196, E271 대명비첸시티
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-orange-400">서비스</h3>
+              <div className="space-y-2">
+                <a href="#services" className="block text-gray-400 hover:text-white transition-colors">장기렌트</a>
+                <a href="#services" className="block text-gray-400 hover:text-white transition-colors">리스</a>
+                <a href="#services" className="block text-gray-400 hover:text-white transition-colors">종합관리</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 하카오토. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
-
-    <!-- 헤더 -->
-    <header class="bg-white/95 backdrop-blur shadow-lg fixed top-8 w-full z-40">
-        <div class="max-w-7xl mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-3xl font-bold text-indigo-600 flex items-center">
-                    🚗 <span class="ml-2">하카오토</span>
-                </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#services" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">서비스</a>
-                    <a href="#about" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">회사소개</a>
-                    <a href="#contact" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">문의하기</a>
-                    <a href="https://open.kakao.com/o/sigaGNmh" target="_blank" class="bg-gradient-to-r from-pink-500 to-orange-500 text-white px-6 py-2 rounded-full font-medium hover:shadow-lg transition-all">견적받기</a>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <!-- 히어로 섹션 -->
-    <section class="gradient-bg hero-pattern text-white pt-32 pb-20 parallax relative overflow-hidden">
-        <div class="absolute inset-0 bg-black/20"></div>
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="text-center md:text-left">
-                    <h1 class="text-5xl md:text-6xl font-bold mb-6 text-shadow leading-tight">
-                        빠른승인가능<br>
-                        즉시출고<br>
-                        <span class="text-yellow-300">장기렌트 리스</span>
-                    </h1>
-                    <p class="text-xl mb-8 opacity-90 leading-relaxed">
-                        합리적인 가격으로 만나는 프리미엄 차량 서비스<br>
-                        하카오토와 함께 새로운 드라이빙 경험을 시작하세요
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="tel:010-3561-3528" class="bg-gradient-to-r from-pink-500 to-orange-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transform hover:scale-105 transition-all text-center">
-                            상담신청
-                        </a>
-                        <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-indigo-600 transition-all text-center">
-                            서비스 알아보기
-                        </a>
-                    </div>
-                </div>
-                <div class="relative floating-animation">
-                    <div class="bg-white/10 backdrop-blur rounded-3xl p-8 border border-white/20">
-                        <svg class="w-full h-64" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- 자동차 SVG -->
-                            <rect x="50" y="120" width="300" height="60" rx="30" fill="#4F46E5"/>
-                            <rect x="70" y="100" width="260" height="40" rx="20" fill="#6366F1"/>
-                            <circle cx="120" cy="160" r="25" fill="#1F2937"/>
-                            <circle cx="280" cy="160" r="25" fill="#1F2937"/>
-                            <circle cx="120" cy="160" r="15" fill="#9CA3AF"/>
-                            <circle cx="280" cy="160" r="15" fill="#9CA3AF"/>
-                            <rect x="90" y="110" width="40" height="25" rx="5" fill="#E5E7EB"/>
-                            <rect x="150" y="110" width="60" height="25" rx="5" fill="#E5E7EB"/>
-                            <rect x="230" y="110" width="60" height="25" rx="5" fill="#E5E7EB"/>
-                            <path d="M320 140 L340 120 L340 160 Z" fill="#4F46E5"/>
-                        </svg>
-                        <div class="text-center mt-4">
-                            <h3 class="text-xl font-semibold mb-2">프리미엄 차량</h3>
-                            <p class="text-white/80">최신 모델의 안전하고 편안한 차량</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 이후 섹션들은 기존 코드 그대로 유지 -->
-
-</body>
-</html>
+  )
+}
