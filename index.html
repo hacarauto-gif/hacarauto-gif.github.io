@@ -12,34 +12,47 @@
             font-family: 'Noto Sans KR', sans-serif;
         }
         
+        /* =====================
+           ✅ 배경 이미지만 교체
+           - 나머지 코드는 원본 그대로 유지
+           - 모든 섹션에 고급스러운 실사 사진 적용
+           ===================== */
+        
+        /* 상단 고정 연락처 바 + 그라데이션 배경 (럭셔리 차량) */
         .gradient-bg {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="carGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23667eea;stop-opacity:0.1"/><stop offset="100%" style="stop-color:%23764ba2;stop-opacity:0.1"/></linearGradient></defs><rect width="1200" height="800" fill="url(%23carGrad)"/><g opacity="0.1"><path d="M200 400 Q400 350 600 400 T1000 400" stroke="%23ffffff" stroke-width="2" fill="none"/><circle cx="300" cy="200" r="50" fill="%23ffffff" opacity="0.05"/><circle cx="900" cy="600" r="80" fill="%23ffffff" opacity="0.05"/><rect x="100" y="300" width="200" height="100" rx="20" fill="%23ffffff" opacity="0.03"/><rect x="800" y="150" width="150" height="200" rx="10" fill="%23ffffff" opacity="0.03"/></g></svg>');
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%),
+                        url('https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1920&auto=format&fit=crop'); /* 럭셔리 차량 주행 */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         
+        /* 히어로 섹션 패턴 → 고급 정장 남성 비주얼 */
         .hero-pattern {
-            background-image: 
-                radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%),
-                radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 0%, transparent 50%),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="luxuryGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23000000;stop-opacity:0.3"/><stop offset="100%" style="stop-color:%23434343;stop-opacity:0.3"/></linearGradient></defs><rect width="1200" height="600" fill="url(%23luxuryGrad)"/><g opacity="0.15"><ellipse cx="300" cy="300" rx="150" ry="80" fill="%23ffffff" opacity="0.1"/><ellipse cx="900" cy="200" rx="120" ry="60" fill="%23ffffff" opacity="0.1"/><path d="M0 400 Q300 350 600 400 T1200 400" stroke="%23ffffff" stroke-width="1" fill="none" opacity="0.2"/></g></svg>');
-        }
-        
-        .luxury-bg {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><radialGradient id="buildingGrad" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:%23f8f9fa;stop-opacity:0.1"/><stop offset="100%" style="stop-color:%23343a40;stop-opacity:0.1"/></radialGradient></defs><rect width="1200" height="800" fill="%231a1a1a"/><g fill="url(%23buildingGrad)"><rect x="100" y="200" width="80" height="400" opacity="0.3"/><rect x="200" y="150" width="100" height="450" opacity="0.4"/><rect x="320" y="180" width="90" height="420" opacity="0.3"/><rect x="430" y="120" width="110" height="480" opacity="0.5"/><rect x="560" y="160" width="95" height="440" opacity="0.3"/><rect x="680" y="100" width="120" height="500" opacity="0.4"/><rect x="820" y="140" width="100" height="460" opacity="0.3"/><rect x="940" y="180" width="85" height="420" opacity="0.3"/></g><g opacity="0.2"><circle cx="200" cy="100" r="3" fill="%23ffffff"/><circle cx="400" cy="80" r="2" fill="%23ffffff"/><circle cx="600" cy="90" r="3" fill="%23ffffff"/><circle cx="800" cy="70" r="2" fill="%23ffffff"/><circle cx="1000" cy="85" r="3" fill="%23ffffff"/></g></svg>');
+            background-image:
+                linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.35)),
+                url('https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1920&auto=format&fit=crop'); /* 정장 입은 남성 */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
         
-        .professional-bg {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="profGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23667eea;stop-opacity:0.2"/><stop offset="100%" style="stop-color:%23764ba2;stop-opacity:0.2"/></linearGradient></defs><rect width="1200" height="600" fill="%23f8f9fa"/><rect width="1200" height="600" fill="url(%23profGrad)"/><g opacity="0.1"><circle cx="200" cy="150" r="80" fill="%23000000"/><circle cx="1000" cy="450" r="100" fill="%23000000"/><rect x="400" y="200" width="400" height="200" rx="20" fill="%23000000" opacity="0.05"/></g></svg>');
+        /* 도심의 프리미엄 분위기 (고급 빌딩 스카이라인) */
+        .luxury-bg {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)),
+                        url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1920&auto=format&fit=crop'); /* 고급 빌딩 스카이라인 */
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
+        }
+        
+        /* 전문성 강조 (고급 도로/하이웨이) */
+        .professional-bg {
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1920&auto=format&fit=crop'); /* 고급 도로 */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
         
         .card-hover {
@@ -454,5 +467,5 @@
             }
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97287a52e0d17b6d',t:'MTc1NTc2MTk3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97287a52e0d17b6d',t:'MTc1NTc2MTk3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
