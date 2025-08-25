@@ -1,0 +1,8 @@
+User-agent: *
+Disallow:
+
+# 사이트맵 경로 (만약 sitemap.xml을 생성했다면 아래 유지, 없으면 삭제 가능)
+Sitemap: https://hacar.co.kr/sitemap.xml
+
+# 크롤러 접근 지연 (과부하 방지용, 선택 사항)
+Crawl-delay: 1
