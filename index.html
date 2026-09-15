@@ -5,413 +5,1094 @@
     <meta name="naver-site-verification" content="8e889be4b4b9e8c5217ce7199cd9f200302e22d3" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>하카오토-국산차.수입차 전차종 장기렌트·리스전문</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap');
-        body { font-family: 'Noto Sans KR', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap');
 
-        /* =========================
-           ✅ 배경이미지만 고급 사진으로 교체
-           - 나머지 코드는 절대 수정하지 않음
-           ========================= */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #ffffff;
+            color: #111827;
+        }
 
-        /* 상단 연락처 바 및 그라데이션 영역: 고급 도로 전경 */
+        /* =========================================================
+           전체 홈페이지 - 밝은 화이트 디자인
+           ========================================================= */
+
         .gradient-bg {
-            background-image:
-                linear-gradient(135deg, rgba(102,126,234,0.55) 0%, rgba(118,75,162,0.55) 100%),
-                url('https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1920&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center; 
-            background-attachment: fixed;
+            background:
+                linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
         }
 
-        /* 히어로 패턴: 고급 차량 근접 샷 */
         .hero-pattern {
-            background-image:
-                radial-gradient(circle at 25% 25%, rgba(255,255,255,0.08) 0%, transparent 50%),
-                radial-gradient(circle at 75% 75%, rgba(255,255,255,0.08) 0%, transparent 50%),
-                url('https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1920&auto=format&fit=crop'); /* 럭셔리 차량 */
-            background-size: cover; 
-            background-position: center; 
+            background:
+                linear-gradient(135deg, #ffffff 0%, #f7fbff 100%);
         }
 
-        /* 프리미엄 특징 섹션: 뉴욕 빌딩 야경 */
         .luxury-bg {
-            background-image:
-                linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.6)),
-                url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1920&auto=format&fit=crop'); /* NYC 스카이라인 */
-            background-size: cover; 
-            background-position: center; 
-            background-attachment: fixed;
+            background:
+                linear-gradient(135deg, #ffffff 0%, #f7faff 100%);
         }
 
-        /* 서비스/CTA 섹션: 정장 입은 남성 비즈니스 무드 */
         .professional-bg {
-            background-image:
-                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-                url('https://images.unsplash.com/photo-1514315384763-ba401779410f?q=80&w=1920&auto=format&fit=crop'); /* 수트 착장 남성 */
-            background-size: cover; 
-            background-position: center; 
+            background:
+                linear-gradient(135deg, #ffffff 0%, #f5f9ff 100%);
         }
 
-        /* ===== 아래부터는 원본 스타일 유지 ===== */
-        .card-hover { transition: all 0.3s ease; backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.95); }
-        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px rgba(0,0,0,0.15); background: rgba(255, 255, 255, 1); }
-        .floating-animation { animation: float 6s ease-in-out infinite; }
-        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
-        .parallax { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
-        .text-shadow { text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        .backdrop-blur { backdrop-filter: blur(10px); }
-        .premium-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.2); }
-        .luxury-overlay { background: linear-gradient(45deg, rgba(0,0,0,0.8), rgba(0,0,0,0.4)); }
-        .glass-effect { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); }
-    </style>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TCHC4LRR');</script>
-<!-- End Google Tag Manager -->
-</head>
-<body class="bg-gray-50">
+        .card-hover {
+            transition: all 0.3s ease;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+        }
 
-<!-- 상단 연락처 바 -->
-<div class="gradient-bg text-white py-2 px-4 text-center text-sm font-medium fixed top-0 w-full z-50">
-    <div class="flex justify-center items-center space-x-6">
-        <a href="https://open.kakao.com/o/sWN8HqHh" target="_blank" 
-   class="inline-flex items-center space-x-2 bg-yellow-400 text-black font-medium px-4 py-2 rounded-full shadow-md hover:bg-yellow-500 transition duration-300 text-sm">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111464.png" alt="카톡" class="w-5 h-5">
-    <span>💬 실시간 카톡상담</span></a>
-        <span>🕒 08:00-20:00</span>
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(37, 99, 235, 0.12);
+            border-color: #bfdbfe;
+        }
+
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .parallax {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .text-shadow {
+            text-shadow: none;
+        }
+
+        .backdrop-blur {
+            backdrop-filter: blur(10px);
+        }
+
+        .premium-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+        }
+
+        .luxury-overlay {
+            background: transparent;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(15px);
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+        }
+
+        /* =========================================================
+           상담사 사진 영역
+           ========================================================= */
+
+        .consultant-image-wrap {
+            position: relative;
+            width: 100%;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        .consultant-image {
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 28px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+            display: block;
+        }
+
+        .consultant-badge {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            background: rgba(255, 255, 255, 0.96);
+            padding: 18px 22px;
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            border: 1px solid #e5e7eb;
+        }
+
+        /* =========================================================
+           서비스 카드
+           ========================================================= */
+
+        .service-card {
+            min-height: 320px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-car {
+            position: absolute;
+            right: 15px;
+            bottom: 10px;
+            width: 190px;
+            height: auto;
+            opacity: 0.96;
+        }
+
+        /* =========================================================
+           통계
+           ========================================================= */
+
+        .stat-section {
+            background: #f8fafc;
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        /* =========================================================
+           하단 상담 영역
+           ========================================================= */
+
+        .consultation-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            border: 1px solid #dbeafe;
+        }
+
+        /* =========================================================
+           모바일
+           ========================================================= */
+
+        @media (max-width: 768px) {
+
+            .consultant-image {
+                height: 330px;
+            }
+
+            .consultant-badge {
+                right: 10px;
+                bottom: 10px;
+                padding: 12px 15px;
+            }
+
+            .service-car {
+                width: 145px;
+            }
+        }
+    </style>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];
+            w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),
+                dl=l!='dataLayer'?'&l='+l:'';
+
+            j.async=true;
+            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TCHC4LRR');
+    </script>
+    <!-- End Google Tag Manager -->
+
+</head>
+
+<body class="bg-white">
+
+<!-- =========================================================
+     상단 연락처 바
+     ========================================================= -->
+
+<div class="bg-white border-b border-gray-200 text-gray-700 py-2 px-4 text-center text-sm font-medium fixed top-0 w-full z-50 shadow-sm">
+
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+
+        <div class="flex justify-center items-center space-x-6">
+
+            <a
+                href="https://open.kakao.com/o/sWN8HqHh"
+                target="_blank"
+                class="inline-flex items-center space-x-2 bg-yellow-400 text-black font-medium px-4 py-2 rounded-full shadow-sm hover:bg-yellow-500 transition duration-300 text-sm"
+            >
+                <span>💬 실시간 카톡상담</span>
+            </a>
+
+            <span>🕒 08:00-20:00</span>
+
+        </div>
+
+        <a
+            href="tel:010-3561-3528"
+            class="font-semibold text-gray-700 hover:text-blue-600"
+        >
+            📞 010-3561-3528
+        </a>
+
     </div>
+
 </div>
 
-<!-- 헤더 -->
-<header class="bg-white/95 backdrop-blur shadow-lg fixed top-8 w-full z-40">
+
+<!-- =========================================================
+     헤더
+     ========================================================= -->
+
+<header class="bg-white/95 backdrop-blur shadow-sm fixed top-10 w-full z-40">
+
     <div class="max-w-7xl mx-auto px-4 py-4">
+
         <div class="flex justify-between items-center">
-            <div class="text-3xl font-bold text-indigo-600 flex items-center">
-                🚗 <span class="ml-2">하카오토</span>
+
+            <div class="text-3xl font-bold text-gray-900 flex items-center">
+
+                🚗
+
+                <span class="ml-2">
+                    하카오토<span class="text-blue-600">모빌</span>
+                </span>
+
             </div>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#services" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">서비스</a>
-            
-              <a href="#contact" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">문의하기</a>
-                <a href="https://open.kakao.com/o/sWN8HqHh" target="_blank" class="bg-gradient-to-r from-pink-500 to-orange-500 text-white px-6 py-2 rounded-full font-medium hover:shadow-lg transition-all">견적받기</a>
+
+
+            <nav class="hidden md:flex space-x-8 items-center">
+
+                <a
+                    href="#home"
+                    class="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                >
+                    홈
+                </a>
+
+                <a
+                    href="#services"
+                    class="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                >
+                    장기렌트
+                </a>
+
+                <a
+                    href="#services"
+                    class="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                >
+                    저신용/무심사
+                </a>
+
+                <a
+                    href="#services"
+                    class="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                >
+                    리스
+                </a>
+
+                <a
+                    href="#contact"
+                    class="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                >
+                    문의하기
+                </a>
+
+                <a
+                    href="https://open.kakao.com/o/sWN8HqHh"
+                    target="_blank"
+                    class="bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-all shadow-md"
+                >
+                    상담문의
+                </a>
+
             </nav>
+
         </div>
+
     </div>
+
 </header>
 
-<!-- 히어로 섹션 -->
-<section class="gradient-bg hero-pattern text-white pt-32 pb-20 parallax relative overflow-hidden">
-    <div class="absolute inset-0 luxury-overlay"></div>
+
+<!-- =========================================================
+     히어로 섹션
+     기존 내용 유지
+     ========================================================= -->
+
+<section
+    id="home"
+    class="hero-pattern text-gray-900 pt-40 pb-20 relative overflow-hidden"
+>
+
     <div class="max-w-7xl mx-auto px-4 relative z-10">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="text-center md:text-left">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 text-shadow leading-tight">
-                    장기렌트.리스<br>국산차.수입차<br> <span class="text-yellow-300">국내최저견적</span>
-                </h1>
-                <p class="text-xl mb-8 opacity-90 leading-relaxed text-shadow">
-                   대표자가 직접영업하여 <br>불필요한수당 수수료없이<br>
-                    하카오토모빌에서 <br>가장저렴한 견적약속합니다
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+            <!-- 왼쪽 문구 -->
+
+            <div class="text-center lg:text-left">
+
+                <p class="text-lg md:text-xl font-semibold text-gray-700 mb-4">
+                    국산차·수입차 전차종
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="tel:010-3561-3528" class="bg-gradient-to-r from-pink-500 to-orange-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transform hover:scale-105 transition-all text-center">
-                        전화.문자 상담신청
+
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+
+                    장기렌트·리스
+                    <br>
+
+                    <span class="text-blue-600">
+                        국내최저견적
+                    </span>
+
+                </h1>
+
+                <p class="text-xl mb-8 text-gray-600 leading-relaxed">
+
+                    대표자가 직접영업하여
+                    <br>
+
+                    불필요한수당 수수료없이
+                    <br>
+
+                    하카오토모빌에서
+                    <br>
+
+                    가장저렴한 견적약속합니다
+
+                </p>
+
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+
+                    <a
+                        href="tel:010-3561-3528"
+                        class="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 hover:shadow-xl transition-all text-center"
+                    >
+                        📞 전화.문자 상담신청
                     </a>
-                    <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-indigo-600 transition-all text-center">
-                        편하게 문의주세요
+
+
+                    <a
+                        href="https://open.kakao.com/o/sWN8HqHh"
+                        target="_blank"
+                        class="bg-yellow-400 text-black px-8 py-4 rounded-xl font-semibold text-lg hover:bg-yellow-500 hover:shadow-xl transition-all text-center"
+                    >
+                        💬 카카오톡 상담
                     </a>
+
                 </div>
+
             </div>
-            <div class="relative floating-animation">
-                <div class="glass-effect rounded-3xl p-8">
-                    <svg class="w-full h-64" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- 원본 SVG 유지 -->
-                        <defs>
-                            <linearGradient id="carBodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#1a1a1a"/>
-                                <stop offset="50%" style="stop-color:#4a4a4a"/>
-                                <stop offset="100%" style="stop-color:#1a1a1a"/>
-                            </linearGradient>
-                            <linearGradient id="windowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#87CEEB"/>
-                                <stop offset="100%" style="stop-color:#4682B4"/>
-                            </linearGradient>
-                        </defs>
-                        <path d="M50 140 Q50 120 70 120 L330 120 Q350 120 350 140 L350 160 Q350 180 330 180 L70 180 Q50 180 50 160 Z" fill="url(#carBodyGrad)"/>
-                        <path d="M80 120 Q80 100 100 100 L300 100 Q320 100 320 120 L320 120 L80 120 Z" fill="url(#carBodyGrad)"/>
-                        <rect x="90" y="105" width="50" height="15" rx="3" fill="url(#windowGrad)" opacity="0.8"/>
-                        <rect x="150" y="105" width="100" height="15" rx="3" fill="url(#windowGrad)" opacity="0.8"/>
-                        <rect x="260" y="105" width="50" height="15" rx="3" fill="url(#windowGrad)" opacity="0.8"/>
-                        <circle cx="110" cy="170" r="20" fill="#2c2c2c"/>
-                        <circle cx="290" cy="170" r="20" fill="#2c2c2c"/>
-                        <circle cx="110" cy="170" r="12" fill="#c0c0c0"/>
-                        <circle cx="290" cy="170" r="12" fill="#c0c0c0"/>
-                        <circle cx="110" cy="170" r="6" fill="#1a1a1a"/>
-                        <circle cx="290" cy="170" r="6" fill="#1a1a1a"/>
-                        <ellipse cx="60" cy="145" rx="8" ry="12" fill="#ffffff" opacity="0.9"/>
-                        <ellipse cx="340" cy="145" rx="8" ry="12" fill="#ff6b6b" opacity="0.8"/>
-                        <rect x="45" y="140" width="15" height="20" rx="2" fill="#1a1a1a"/>
-                        <rect x="47" y="142" width="11" height="3" fill="#c0c0c0"/>
-                        <rect x="47" y="147" width="11" height="3" fill="#c0c0c0"/>
-                        <rect x="47" y="152" width="11" height="3" fill="#c0c0c0"/>
-                    </svg>
-                    <div class="text-center mt-4">
-                        <h3 class="text-xl font-semibold mb-2">국산차.수입차 모든브랜드</h3>
-                        <p class="text-white/80">경차,승용세단,SUV,전기차,상용차트럭</p>
+
+
+            <!-- =================================================
+                 상담사 사진
+                 ================================================= -->
+
+            <div class="consultant-image-wrap floating-animation">
+
+                <!--
+                    이 사진 파일을 GitHub에
+                    consultants.jpg 라는 이름으로 올려주세요.
+                -->
+
+                <img
+                    src="consultants.jpg"
+                    alt="하카오토모빌 상담사"
+                    class="consultant-image"
+                >
+
+
+                <div class="consultant-badge">
+
+                    <div class="text-sm text-gray-500 mb-1">
+                        하카오토모빌
                     </div>
+
+                    <div class="text-xl font-bold text-gray-900">
+                        믿음을 드리겠습니다
+                    </div>
+
+                    <div class="text-sm text-blue-600 mt-1">
+                        대표 김이사
+                    </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
-<!-- 서비스 섹션 -->
-<section class="py-20 professional-bg" id="services">
+
+<!-- =========================================================
+     서비스 섹션
+     ========================================================= -->
+
+<section
+    class="py-20 professional-bg"
+    id="services"
+>
+
     <div class="max-w-7xl mx-auto px-4">
+
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-white mb-4">하카오토는 고객님의 입장에서 생각합니다</h2>
-            <p class="text-xl text-white/80">고객의 다양한 니즈.상황에 맞춤형<br>차량 출고서비스를 제공합니다</p>
+
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">
+
+                하카오토는 고객님의 입장에서 생각합니다
+
+            </h2>
+
+            <p class="text-xl text-gray-600">
+
+                고객의 다양한 니즈.상황에 맞춤형
+                <br>
+
+                차량 출고서비스를 제공합니다
+
+            </p>
+
         </div>
+
+
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="card-hover rounded-3xl p-8 text-center border border-blue-200">
-                <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+
+
+            <!-- 장기렌트 -->
+
+            <div class="card-hover service-card rounded-3xl p-8 text-center">
+
+                <div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+
+                    <svg
+                        class="w-10 h-10 text-blue-600"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                    >
+
                         <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+
                         <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1V8a1 1 0 00-1-1h-3z"/>
+
                     </svg>
+
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">장기렌트</h3>
-                <p class="text-gray-600 leading-relaxed">12개월부터 60개월까지 다양한 기간의<br>장기렌트 서비스로 부담 없이<br>새 차를 이용하세요</p>
+
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                    장기렌트
+                </h3>
+
+                <p class="text-gray-600 leading-relaxed">
+
+                    12개월부터 60개월까지 다양한 기간의
+                    <br>
+
+                    장기렌트 서비스로 부담 없이
+                    <br>
+
+                    새 차를 이용하세요
+
+                </p>
+
+
+                <div class="absolute bottom-5 left-8 text-blue-600 font-semibold">
+                    자세히 보기 →
+                </div>
+
             </div>
-            <div class="card-hover rounded-3xl p-8 text-center border border-green-200">
-                <div class="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+
+
+            <!-- 저신용 무심사 -->
+
+            <div class="card-hover service-card rounded-3xl p-8 text-center border-2 border-blue-200">
+
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold">
+
+                    주요 상담 서비스
+
+                </div>
+
+
+                <div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+
+                    <svg
+                        class="w-10 h-10 text-blue-600"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                    >
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 3l7 4v5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V7l7-4z"
+                        />
+
                     </svg>
+
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">저신용·무심사·신용불량</h3>
-                <p class="text-gray-600 leading-relaxed">신용등급에 관계없이 누구나 이용 가능한 장기렌트 리스 서비스를 제공합니다</p>
+
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                    저신용·무심사·신용불량
+                </h3>
+
+                <p class="text-gray-600 leading-relaxed">
+
+                    신용등급에 관계없이 누구나 이용 가능한
+                    <br>
+
+                    장기렌트 리스 서비스를 제공합니다
+
+                </p>
+
+
+                <div class="absolute bottom-5 left-8 text-blue-600 font-semibold">
+                    자세히 보기 →
+                </div>
+
             </div>
-            <div class="card-hover rounded-3xl p-8 text-center border border-purple-200">
-                <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+
+
+            <!-- 리스 -->
+
+            <div class="card-hover service-card rounded-3xl p-8 text-center">
+
+                <div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+
+                    <svg
+                        class="w-10 h-10 text-blue-600"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                    >
+
                         <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
-                        <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/>
+
+                        <path
+                            fill-rule="evenodd"
+                            d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
+                            clip-rule="evenodd"
+                        />
+
                     </svg>
+
                 </div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">리스</h3>
-                <p class="text-gray-600 leading-relaxed">법인 및 개인사업자를 위한 최적화된<br>리스상품으로 세제혜택까지 받으세요</p>
+
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                    리스
+                </h3>
+
+                <p class="text-gray-600 leading-relaxed">
+
+                    법인 및 개인사업자를 위한 최적화된
+                    <br>
+
+                    리스상품으로 세제혜택까지 받으세요
+
+                </p>
+
+
+                <div class="absolute bottom-5 left-8 text-blue-600 font-semibold">
+                    자세히 보기 →
+                </div>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
-<!-- 특징 섹션 -->
-<section class="py-20 luxury-bg text-white">
+
+<!-- =========================================================
+     특징 섹션
+     ========================================================= -->
+
+<section class="py-20 luxury-bg text-gray-900">
+
     <div class="max-w-7xl mx-auto px-4">
+
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-4 text-shadow">하카오토모빌<br>믿음을 드리겠습니다</h2>
-            <p class="text-xl opacity-90">고객 만족도 99%의 검증된 서비스 품질</p>
+
+            <h2 class="text-4xl font-bold mb-4">
+                하카오토모빌
+                <br>
+                믿음을 드리겠습니다
+            </h2>
+
+            <p class="text-xl text-gray-600">
+                고객 만족도 99%의 검증된 서비스 품질
+            </p>
+
         </div>
+
+
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="text-center glass-effect p-6 rounded-2xl">
-                <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">1</div>
-                <h3 class="text-xl font-semibold mb-3">저렴하고 투명한 견적</h3>
-                <p class="text-white/80">숨겨진 비용 없는 명확하고 투명한 가격 정책</p>
+
+
+            <div class="glass-effect p-6 rounded-2xl text-center">
+
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 text-2xl font-bold">
+                    1
+                </div>
+
+                <h3 class="text-xl font-semibold mb-3">
+                    저렴하고 투명한 견적
+                </h3>
+
+                <p class="text-gray-600">
+                    숨겨진 비용 없는 명확하고 투명한 가격 정책
+                </p>
+
             </div>
-            <div class="text-center glass-effect p-6 rounded-2xl">
-                <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">2</div>
-                <h3 class="text-xl font-semibold mb-3">빠른 무심사 승인</h3>
-                <p class="text-white/80">최대 24시간 내 승인 완료로 빠른 차량 이용</p>
+
+
+            <div class="glass-effect p-6 rounded-2xl text-center">
+
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 text-2xl font-bold">
+                    2
+                </div>
+
+                <h3 class="text-xl font-semibold mb-3">
+                    빠른 무심사 승인
+                </h3>
+
+                <p class="text-gray-600">
+                    최대 24시간 내 승인 완료로 빠른 차량 이용
+                </p>
+
             </div>
-            <div class="text-center glass-effect p-6 rounded-2xl">
-                <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">3</div>
-                <h3 class="text-xl font-semibold mb-3">전국 출고서비스</h3>
-                <p class="text-white/80">전국 어디서나 동일한 품질의 서비스 제공</p>
+
+
+            <div class="glass-effect p-6 rounded-2xl text-center">
+
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 text-2xl font-bold">
+                    3
+                </div>
+
+                <h3 class="text-xl font-semibold mb-3">
+                    전국 출고서비스
+                </h3>
+
+                <p class="text-gray-600">
+                    전국 어디서나 동일한 품질의 서비스 제공
+                </p>
+
             </div>
-            <div class="text-center glass-effect p-6 rounded-2xl">
-                <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">4</div>
-                <h3 class="text-xl font-semibold mb-3">24시간 상담지원</h3>
-                <p class="text-white/80">언제든지 도움이 필요할 때 가능한 고객지원</p>
+
+
+            <div class="glass-effect p-6 rounded-2xl text-center">
+
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 text-2xl font-bold">
+                    4
+                </div>
+
+                <h3 class="text-xl font-semibold mb-3">
+                    24시간 상담지원
+                </h3>
+
+                <p class="text-gray-600">
+                    언제든지 도움이 필요할 때 가능한 고객지원
+                </p>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
-<!-- 통계 섹션 -->
-<section class="py-20 gradient-bg text-white">
-    <div class="max-w-7xl mx.auto px-4">
-        <div class="grid md:grid-cols-4 gap-8 text-center">
-            <div class="glass-effect p-6 rounded-2xl">
-                <div class="text-4xl font-bold mb-2 text-shadow">1,500+</div>
-                <div class="text-lg opacity-90">누적 고객수</div>
-            </div>
-            <div class="glass-effect p-6 rounded-2xl">
-                <div class="text-4xl font-bold mb-2 text-shadow">99%</div>
-                <div class="text-lg opacity-90">고객 만족도</div>
-            </div>
-            <div class="glass-effect p-6 rounded-2xl">
-                <div class="text-4xl font-bold mb-2 text-shadow">500+</div>
-                <div class="text-lg opacity-90">보유 차량</div>
-            </div>
-            <div class="glass-effect p-6 rounded-2xl">
-                <div class="text-4xl font-bold mb-2 text-shadow">24/7</div>
-                <div class="text-lg opacity-90">고객사후지원</div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- CTA 섹션 -->
-<section class="py-20 professional-bg text-center text-white" id="quote">
-    <div class="max-w-4xl mx-auto px-4">
-        <h2 class="text-4xl font-bold mb-6 text-shadow">국내렌트 금융사비교<br>최저견적 약속드립니다</h2>
-        <a href="https://open.kakao.com/o/sWN8HqHh" target="_blank" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-4 rounded-full text-xl font-semibold hover:shadow-xl transform hover:scale-105 transition-all">
-            카카오톡 즉시상담가능
-        </a>
-    </div>
-</section>
+<!-- =========================================================
+     통계 섹션
+     ========================================================= -->
 
-<!-- 푸터 -->
-<footer class="bg-gray-900 text-white py-16" id="contact">
+<section class="py-20 stat-section">
+
     <div class="max-w-7xl mx-auto px-4">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div>
-                <div class="text-2xl font-bold mb-4 flex items-center"> 🚗 <span class="ml-2">하카오토모빌</span> </div>
-                <p class="text-gray-400 leading-relaxed mb-4">사업자등록번호 : 890-04-03219<br>스마트한 장기렌트 리스 전문회사<br>고객 만족을 최우선으로 하는<br>신뢰할 수 있는 파트너</p>
-                <p class="text-gray-400 text-sm">📍 서울특별시 월드컵로196 E271<br>대명비첸시티</p>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold mb-4 text-orange-400">연락처</h3>
-                <div class="space-y-2 text-gray-400">
-                    <p>📞 직통전화: 010-3561-3528</p>
-                    <p>🕒 운영시간: 08:00-20:00</p>
+
+        <div class="grid md:grid-cols-4 gap-8 text-center">
+
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm">
+
+                <div class="text-4xl font-bold mb-2 text-blue-600">
+                    1,500+
                 </div>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold mb-4 text-orange-400">서비스</h3>
-                <div class="space-y-2">
-                    <a href="#services" class="block text-gray-400 hover:text-white transition-colors">국산차.수입차 장기렌트</a>
-                    <a href="#services" class="block text-gray-400 hover:text-white transition-colors">수입차.국산차 화물상용차 리스</a>
-                    <a href="#services" class="block text-gray-400 hover:text-white transition-colors">무심사.저신용.개인회생.신용불량 즉시승인</a>
+
+                <div class="text-lg text-gray-600">
+                    누적 고객수
                 </div>
+
             </div>
+
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm">
+
+                <div class="text-4xl font-bold mb-2 text-blue-600">
+                    99%
+                </div>
+
+                <div class="text-lg text-gray-600">
+                    고객 만족도
+                </div>
+
+            </div>
+
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm">
+
+                <div class="text-4xl font-bold mb-2 text-blue-600">
+                    500+
+                </div>
+
+                <div class="text-lg text-gray-600">
+                    보유 차량
+                </div>
+
+            </div>
+
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm">
+
+                <div class="text-4xl font-bold mb-2 text-blue-600">
+                    24/7
+                </div>
+
+                <div class="text-lg text-gray-600">
+                    고객사후지원
+                </div>
+
+            </div>
+
         </div>
-        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 하카오토. All rights reserved.</p>
-        </div>
+
     </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA 섹션
+     ========================================================= -->
+
+<section
+    class="py-20 consultation-box"
+    id="quote"
+>
+
+    <div class="max-w-6xl mx-auto px-4">
+
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+
+
+            <div>
+
+                <p class="text-blue-600 font-semibold text-lg mb-3">
+                    국내렌트 금융사비교
+                </p>
+
+                <h2 class="text-4xl font-bold mb-6 text-gray-900">
+
+                    최저견적 약속드립니다
+
+                </h2>
+
+
+                <ul class="space-y-4 text-gray-700">
+
+                    <li>
+                        ✓ 전문 상담사가 친절하게 안내해드립니다.
+                    </li>
+
+                    <li>
+                        ✓ 카카오톡으로 간편하게 상담받으세요.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-200">
+
+                <div class="text-center mb-6">
+
+                    <div class="text-3xl mb-3">
+                        💬
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-gray-900">
+                        카카오톡 실시간 상담
+                    </h3>
+
+                    <p class="text-gray-500 mt-2">
+                        클릭하시면 상담이 시작됩니다.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="https://open.kakao.com/o/sWN8HqHh"
+                    target="_blank"
+                    class="block w-full bg-yellow-400 hover:bg-yellow-500 text-black text-center py-4 rounded-xl font-bold text-lg transition-all mb-3"
+                >
+                    💬 카카오톡 상담하기
+                </a>
+
+
+                <a
+                    href="tel:010-3561-3528"
+                    class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-4 rounded-xl font-bold text-lg transition-all"
+                >
+                    📞 전화·문자 상담 010-3561-3528
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     푸터
+     ========================================================= -->
+
+<footer
+    class="bg-gray-900 text-white py-16"
+    id="contact"
+>
+
+    <div class="max-w-7xl mx-auto px-4">
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+
+            <div>
+
+                <div class="text-2xl font-bold mb-4 flex items-center">
+
+                    🚗
+
+                    <span class="ml-2">
+                        하카오토모빌
+                    </span>
+
+                </div>
+
+
+                <p class="text-gray-400 leading-relaxed mb-4">
+
+                    사업자등록번호 : 890-04-03219
+                    <br>
+
+                    스마트한 장기렌트 리스 전문회사
+                    <br>
+
+                    고객 만족을 최우선으로 하는
+                    <br>
+
+                    신뢰할 수 있는 파트너
+
+                </p>
+
+
+                <p class="text-gray-400 text-sm">
+
+                    📍 서울특별시 월드컵로196 E271
+                    <br>
+
+                    대명비첸시티
+
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3 class="text-lg font-semibold mb-4 text-blue-400">
+                    연락처
+                </h3>
+
+                <div class="space-y-2 text-gray-400">
+
+                    <p>
+                        📞 직통전화: 010-3561-3528
+                    </p>
+
+                    <p>
+                        🕒 운영시간: 08:00-20:00
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h3 class="text-lg font-semibold mb-4 text-blue-400">
+                    서비스
+                </h3>
+
+                <div class="space-y-2">
+
+                    <a
+                        href="#services"
+                        class="block text-gray-400 hover:text-white transition-colors"
+                    >
+                        국산차.수입차 장기렌트
+                    </a>
+
+                    <a
+                        href="#services"
+                        class="block text-gray-400 hover:text-white transition-colors"
+                    >
+                        수입차.국산차 화물상용차 리스
+                    </a>
+
+                    <a
+                        href="#services"
+                        class="block text-gray-400 hover:text-white transition-colors"
+                    >
+                        무심사.저신용.개인회생.신용불량 즉시승인
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+
+            <p>
+                &copy; 2024 하카오토. All rights reserved.
+            </p>
+
+        </div>
+
+    </div>
+
 </footer>
 
-<!-- 원본 스크립트들: 내용 변경 없음 -->
+
+<!-- =========================================================
+     스크립트
+     ========================================================= -->
+
 <script>
-// 스무스 스크롤
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
 
-// 견적 폼 표시
-function showQuoteForm() {
-  const modal = document.createElement('div');
-  modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
-  modal.innerHTML = <div class="bg-white rounded-3xl p-8 max-w-md w-full premium-card">
-  <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">무료 견적 신청</h3>
-  <form class="space-y-4">
-    <div>
-      <label class="block text-gray-700 font-medium mb-2">이름</label>
-      <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="성함을 입력하세요">
-    </div>
-    <div>
-      <label class="block text-gray-700 font-medium mb-2">연락처</label>
-      <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="연락처를 입력하세요">
-    </div>
-    <div>
-      <label class="block text-gray-700 font-medium mb-2">희망 차종</label>
-      <select class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
-        <option>소형차</option>
-        <option>중형차</option>
-        <option>대형차</option>
-        <option>SUV</option>
-        <option>기타</option>
-      </select>
-    </div>
-    <div>
-      <label class="block text-gray-700 font-medium mb-2">이용 기간</label>
-      <select class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
-        <option>12개월</option>
-        <option>24개월</option>
-        <option>36개월</option>
-        <option>48개월</option>
-        <option>60개월</option>
-      </select>
-    </div>
-    <div class="flex gap-3 pt-4">
-      <button type="button" onclick="this.closest('.fixed').remove()" class="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-xl font-medium hover:bg-gray-50 transition-colors">
-        취소
-      </button>
-      <button type="submit" class="flex-1 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-medium hover:shadow-lg transition-all">
-        신청하기
-      </button>
-    </div>
-  </form>
-</div> ;
-  modal.addEventListener('click', function(e) { if (e.target === modal) { modal.remove(); } });
-  modal.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('견적 신청이 완료되었습니다!\n곧 상담사가 연락드리겠습니다.');
-    modal.remove();
-  });
-  document.body.appendChild(modal);
-}
+    /* 스무스 스크롤 */
 
-// 스크롤 애니메이션
-const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-const observer = new IntersectionObserver(function(entries) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, observerOptions);
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-document.querySelectorAll('.card-hover').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(30px)';
-  el.style.transition = 'all 0.6s ease';
-  observer.observe(el);
-});
+        anchor.addEventListener('click', function (e) {
 
-// 헤더 스크롤 효과
-window.addEventListener('scroll', function() {
-  const header = document.querySelector('header');
-  if (window.scrollY > 100) {
-    header.classList.add('bg-white/95');
-    header.classList.remove('bg-white/95');
-  }
-});
+            e.preventDefault();
+
+            const target = document.querySelector(
+                this.getAttribute('href')
+            );
+
+            if (target) {
+
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+
+            }
+
+        });
+
+    });
+
+
+    /* 카드 등장 애니메이션 */
+
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+
+    const observer = new IntersectionObserver(
+        function(entries) {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+
+                }
+
+            });
+
+        },
+        observerOptions
+    );
+
+
+    document.querySelectorAll('.card-hover').forEach(el => {
+
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.6s ease';
+
+        observer.observe(el);
+
+    });
+
+
+    /* 헤더 스크롤 효과 */
+
+    window.addEventListener('scroll', function() {
+
+        const header = document.querySelector('header');
+
+        if (window.scrollY > 50) {
+
+            header.classList.add('shadow-md');
+
+        } else {
+
+            header.classList.remove('shadow-md');
+
+        }
+
+    });
+
 </script>
 
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97287a52e0d17b6d',t:'MTc1NTc2MTk3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+
 </body>
 </html>
-
-
-
-
-
-
 
 
 
